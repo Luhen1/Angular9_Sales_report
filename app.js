@@ -3,6 +3,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/sales-report', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true 
+}).then(() => console.log('connection sucessful'))
+  .catch((err) => console.log(err));
+      
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
