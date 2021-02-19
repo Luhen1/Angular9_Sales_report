@@ -8,6 +8,10 @@ import { SalesDetailsComponent } from './sales-details/sales-details.component';
 import { AddSalesComponent } from './add-sales/add-sales.component';
 import { EditSalesComponent } from './edit-sales/edit-sales.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,10 @@ import { EditSalesComponent } from './edit-sales/edit-sales.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

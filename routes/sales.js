@@ -3,7 +3,7 @@ var router = express.Router();
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
-var Sales = require('.../models/Sales');
+var Sales = require('../models/Sales');
 const { nextTick } = require('process');
 
 server.listen(4000);
@@ -28,7 +28,7 @@ router.get('/itemsales', function(req, res, next)
 {
     Sales.aggregate([
         {
-            #group: {
+            $group: {
                 _id: { itemId: '$itemId', itemName: '$itemName' },
                 totalPrice: {
                     $sum: '$totalPrice'
