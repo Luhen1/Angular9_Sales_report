@@ -1,5 +1,5 @@
 export class Chart {
-    _id: String;
-    totalPrice: Number;
+    _id: any;
+    totalPrice: number;
 }
 

@@ -1,10 +1,10 @@
 export class Sales {
-    _id: String;
-    itemId: String;
-    itemName: String;
-    itemPrice: Number;
-    itemQty: Number;
-    totalPrice: String;
+    _id: string;
+    itemId: string;
+    itemName: string;
+    itemPrice: number;
+    itemQty: number;
+    totalPrice: number;
     updated: Date; 
 }
 
